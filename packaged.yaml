@@ -1,0 +1,17 @@
+AWSTemplateFormatVersion: '2010-09-09'
+Transform: AWS::Serverless-2016-10-31
+Description: An AWS Serverless Application.
+Resources:
+  GPTCaller:
+    Type: AWS::Serverless::Function
+    Properties:
+      Handler: app.lambda_handler
+      Runtime: python3.10
+      CodeUri: s3://gpt-caller-artifact/fc4dc0d36885fb97c1e53c696c42fd2d
+      Description: "OpenAI API\u3092\u4F7F\u3063\u3066GPT\u306B\u30D7\u30ED\u30F3\u30D7\
+        \u30C8\u3092\u6295\u3052\u308B"
+      MemorySize: 512
+      Timeout: 10
+      Policies: AWSLambdaBasicExecutionRole
+    Metadata:
+      SamResourceId: GPTCaller
