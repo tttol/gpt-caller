@@ -18,3 +18,4 @@ build/
 .env
 .venv310/
 .aws-sam/
+deploy.sh
