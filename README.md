@@ -33,4 +33,5 @@ aws lambda update-function-code \
 --function-name my-function \
 --image-uri <account-id>.dkr.ecr.<region>.amazonaws.com/my-lambda-repo:latest \
 --region <region>
+--architectures arm64
 ```
