@@ -25,6 +25,7 @@ aws lambda create-function --function-name my-function \
 --code ImageUri=<account-id>.dkr.ecr.<region>.amazonaws.com/my-lambda-repo:latest \
 --role arn:aws:iam::<account-id>:role/<role-name> \
 --region <region>
+--architectures arm64
 ```
 
 更新

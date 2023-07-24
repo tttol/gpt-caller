@@ -8,11 +8,14 @@ from botocore.exceptions import BotoCoreError, ClientError
 def lambda_handler(event, context):
     load_dotenv()
 
+    # Extract the message from the POST request body
+    message_content = event['body']
+
     # openai.api_key = os.getenv("OPENAI_API_KEY")
     openai.api_key = get_key_from_secret_mng()
     response = openai.ChatCompletion.create(
         model="gpt-3.5-turbo",
-        messages=[{"role": "user", "content": "OpenAI APIについて20字以内で教えて下さい"}],
+        messages=[{"role": "user", "content": message_content}],
     )
 
     print(response.choices[0].message['content'])
