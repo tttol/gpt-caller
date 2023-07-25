@@ -1,5 +1,6 @@
 # gpt-caller
 OpenAI APIを使ってGPTをコールするAPI
+![アーキテクチャ図](./gpt-caller-architecture.png)
 # PRD
 - Lambda
   - IAMロールでAPI Gatewayからしか実行できないようにする
